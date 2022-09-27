@@ -32,3 +32,8 @@ jobs:
     - name: run file
       run: |
         python test.py
+    - name: Archive build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: final.geojson
+        path: ./final.geojson
